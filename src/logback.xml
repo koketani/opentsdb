@@ -20,7 +20,7 @@
   <!-- Appender to write OpenTSDB data to a set of rotating log files -->
   <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
       <file>/var/log/opentsdb/opentsdb.log</file>
-      <append>true</append>
+      <prudent>true</prudent>
       <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
          <fileNamePattern>/home/y/logs/opentsdb2/opentsdb.log.%i</fileNamePattern>
          <minIndex>1</minIndex>
@@ -40,7 +40,7 @@
        sure to set the "level" to "INFO" in QueryLog below. -->
   <appender name="QUERY_LOG" class="ch.qos.logback.core.rolling.RollingFileAppender">
     <file>/var/log/opentsdb/queries.log</file>
-    <append>true</append>
+    <prudent>true</prudent>
 
     <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
         <fileNamePattern>/var/log/opentsdb/queries.log.%i</fileNamePattern>
